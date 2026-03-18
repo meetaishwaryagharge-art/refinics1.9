@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refinics</title>
+
+<!-- Bootstrap 5.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts (Montserrat + Open Sans) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins', sans-serif;
+  background:#f7f8fa;
+}
+
+h1,h2,h3,h4,h5{
+ font-family:'Poppins', sans-serif;
+}
+.header{
+background:#e6e6e6;
+padding:10px 0;
+}
+
+.navbar-nav .nav-link{
+font-weight:500;
+color:#333;
+margin:0 10px;
+}
+
+.navbar-nav .nav-link:hover{
+color:#0d4d8b;
+}
+
+.btn-buy{
+    background:  #044d96;
+    color:#fff;
+    border:none;
+    padding:8px 18px;
+    border-radius:6px;
+}
+
+.btn-buy:hover{
+    opacity:0.9;
+    color: #044d96;
+}
+
+.logo{
+height:100px;
+ width:auto;
+}  
+/* Dropdown */
+.dropdown a {
+color:black;
+}
+.dropdown:hover .dropdown-menu {
+  display:block;
+  margin-top: 0;
+  
+} 
+/* Hero Section */
+.partner-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    height: 350px;
+}
+
+.partner-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.partner-hero p {
+    font-size: 18px;
+}
+.btn{
+  background: #044d96;
+  color: white;
+}
+/* Section Padding */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Cards */
+.section-title{
+    text-align:center;
+    font-size:38px;
+    font-weight:600;
+    margin-bottom:50px;
+}
+
+/* Filter Buttons */
+.filter-btns{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.filter-btns button{
+    border:none;
+    background:#e9ecef;
+    padding:10px 25px;
+    margin:5px;
+    border-radius:30px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.filter-btns button.active,
+.filter-btns button:hover{
+    background:#044d96;
+    color:#fff;
+}
+
+/* Partner Card */
+.partner-card{
+    background:#fff;
+    padding:35px 20px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.partner-card:hover{
+    transform:translateY(-10px);
+}
+
+.partner-card i{
+    font-size:40px;
+    color:#044d96;
+    margin-bottom:15px;
+}
+
+.partner-card h6{
+    font-weight:500;
+    margin-top:10px;
+}
+
+/* Hide animation */
+.hide{
+    display:none !important;
+}
+
+/* Icon */
+.icon-box {
+    font-size: 40px;
+    color:#044d96;
+    margin-bottom: 20px;
+}
+
+/* Benefits */
+.benefit-box {
+    padding: 30px;
+    border-radius: 15px;
+     background: #044d96;
+     color: white;
+    transition: 0.3s;
+}
+
+.benefit-box:hover {
+    background:#fff;
+    color: #044d96;
+}
+
+/* Form */
+.partner-form {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/* CTA */
+.cta-section {
+    background:#044d96;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+     margin-bottom:40px;
+}
+
+.cta-btn {
+    background: #fff;
+    color:#044d96;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #000;
+    color: #fff;
+}
+/*new footer*/
+.footer {
+            background:  #044d96;
+            border-top: 1px solid #e0e0e0;
+            padding: 2.5rem 2rem;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid  #044d96;;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#044d96;;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color:#044d96;;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-nav a {
+            color:  #044d96;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #044d96;
+            opacity: 0.8;
+        }
+
+        .footer-nav a:hover {
+            color: #044d96;
+        }
+
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .footer-nav {
+                gap: 1.5rem;
+            }
+
+            .social-icons {
+                gap: 0.8rem;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="Refinics Logo.webp" alt="Refinics Logo" class="logo">
+</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-3">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">ABOUT US</a></li>
+        <!-- service Dropdown -->
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"
+             data-bs-toggle="dropdown">
+           SERVICES
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="loans.html">LOANS</a></li>
+            <li><a class="dropdown-item" href="investment.html">INVESTMENTS</a></li>
+            <li><a class="dropdown-item" href="insurance.html">INSURANCE</a></li>
+            <li><a class="dropdown-item" href="realestae.html">REAL ESTATE</a></li>
+            
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="partners.html">PARTNER WITH US</a></li>
+        <li class="nav-item"><a class="nav-link" href="contect-us.html">CONTACT US</a></li>
+      </ul>
+
+       <button class="btn btn-buy" data-bs-toggle="modal" data-bs-target="#applyModal">
+Apply Now
+</button>
+<!--popup-->
+<div class="modal fade" id="applyModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="modal-title">Send Message</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Full Name" required>
+          </div>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email" required>
+          </div>
+
+          <div class="mb-3">
+            <input type="tel" class="form-control" placeholder="Phone" required>
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-buy">Submit</button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="partner-hero">
+    <div class="container">
+        <h1>Partner With REFINICS </h1>
+        
+        <a href="#partnerForm" class="btn mt-3">Become a Partner</a>
+    </div>
+</section>
+
+<!-- Why Partner With Us -->
+<section class="section-padding text-center">
+    <div class="container">
+        <h2 class="mb-5">Why Partner With Us?</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="partner-card p-4">
+                    <div class="icon-box">
+                       <i class="bi bi-shield-check"></i>
+                    </div>
+                   <h5><b>Trusted Financial Network</b></h5>
+<p>
+We work closely with leading banks, NBFCs, and financial institutions
+to provide reliable and secure financial solutions for our clients
+and partners.
+</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="partner-card p-4">
+                    <div class="icon-box">
+                       <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h5><b>Attractive Commission Structure</b></h5>
+<p>
+Our partners benefit from competitive commissions on successful
+loan disbursements, investment advisory, and financial services.
+</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="partner-card p-4">
+                    <div class="icon-box">
+                       <i class="bi bi-headset"></i>
+                    </div>
+                    <h5><b>End-to-End Partner Support</b></h5>
+<p>
+We provide complete operational, marketing, and backend assistance
+to help our partners grow their business efficiently.
+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partner Types -->
+<div class="container py-5">
+
+    <h2 class="section-title">Our Partner Categories</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-btns">
+        <button class="active" onclick="filterSelection('all')"><b>All</b></button>
+        <button onclick="filterSelection('loan')"><b>Loan Agents</b></button>
+        <button onclick="filterSelection('builder')"><b>Builders</b></button>
+        <button onclick="filterSelection('advisor')"><b>Financial Advisors</b></button>
+        <button onclick="filterSelection('banker')"><b>Banking Professionals</b></button>
+    </div>
+
+    <!-- Partner Cards -->
+    <div class="row g-4" id="partnerContainer">
+
+        <div class="col-md-3 filter-item loan">
+            <div class="partner-card">
+                <i class="bi bi-person-badge"></i>
+                <h6><b>Loan Agents</b></h6>
+<p>Individuals or agencies who assist clients in sourcing loan opportunities.</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 filter-item builder">
+            <div class="partner-card">
+                <i class="bi bi-building"></i>
+               <h6><b>Real Estate Builders</b></h6>
+<p>Developers and builders partnering for property financing and investment solutions.</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 filter-item advisor">
+            <div class="partner-card">
+               <i class="bi bi-graph-up"></i>
+               <h6><b>Financial Advisors</b></h6>
+<p>Professional advisors offering investment, insurance, and wealth management services.</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 filter-item banker">
+            <div class="partner-card">
+                <i class="bi bi-bank"></i>
+                <h6><b>Banking Professionals</b></h6>
+<p>Experienced bankers and relationship managers connecting clients with financial products.</p>
+            </div>
+        </div>
+
+        <!-- Extra Sample Items for Sorting Demo -->
+
+        <div class="col-md-3 filter-item loan">
+            <div class="partner-card">
+                <i class="bi bi-person-workspace"></i>
+                <h6><b>Senior Loan Consultant</b></h6>
+<p>Experienced professionals specializing in business, mortgage, and structured loan advisory.</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 filter-item builder">
+            <div class="partner-card">
+                <i class="bi bi-buildings"></i>
+                <h6><b>Real Estate Developer</b></h6>
+<p>Developers collaborating with us to promote residential and commercial projects.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function filterSelection(category) {
+
+    let items = document.querySelectorAll(".filter-item");
+    let buttons = document.querySelectorAll(".filter-btns button");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+
+    if (category === "all") {
+        items.forEach(item => item.classList.remove("hide"));
+        return;
+    }
+
+    items.forEach(item => {
+        if (item.classList.contains(category)) {
+            item.classList.remove("hide");
+        } else {
+            item.classList.add("hide");
+        }
+    });
+}
+</script>
+
+<!-- Benefits Section -->
+<section class="section-padding text-center">
+    <div class="container">
+        <h2 class="mb-5">Partner Benefits</h2>
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="benefit-box">
+                  <h5>Fast Loan Processing</h5>
+<p>
+Our strong banking relationships enable quicker approvals and
+smooth documentation processes for clients.
+</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="benefit-box">
+                   <h5>Transparent Commission Payout</h5>
+<p>
+Partners receive clear and timely commission payouts with
+a transparent and structured reward system.
+</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="benefit-box">
+                   <h5>Dedicated Relationship Manager</h5>
+<p>
+Each partner is supported by a dedicated manager who assists
+with deal closures, documentation, and client servicing.
+</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Partner Registration Form -->
+<section id="partnerForm" class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="partner-form">
+                    <h3 class="text-center mb-4">Become Our Partner</h3>
+                    <form id="partnerFormSubmit">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Full Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="tel" class="form-control" placeholder="Mobile Number" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select" required>
+                                    <option value="">Select Partner Type</option>
+                                    <option>Loan Agent</option>
+                                    <option>Builder</option>
+                                    <option>Financial Advisor</option>
+                                    <option>Banking Professional</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary px-5">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="successMessage" class="alert alert-success mt-3 d-none">
+                        Thank you! Our team will contact you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Start Earning With REFINICS Today!</h2>
+        <p>Join our growing network of professional partners.</p>
+        <a href="#partnerForm" class="cta-btn">Register Now</a>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById("partnerFormSubmit").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("successMessage").classList.remove("d-none");
+    this.reset();
+});
+</script>
+
+
+
+
+<!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+               
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="footer-nav">
+                 <a href="index.html">Home</a>
+                <a href="aboutus.html">AboutUs</a>
+                <a href="loans.html">Services</a>
+                <a href="partners.html">Partner With Us</a>
+                <a href="contect-us.html">Contact</a>
+               
+            </nav>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                © 2026 Refinics | All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
